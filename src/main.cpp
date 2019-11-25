@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "MedicalVisualization.h"
+#include <QApplication>
 
 int main(int argc, char *argv[])
 {

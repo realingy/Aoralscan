@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ui_CStackWidget.h"
+
 class CStackWidget :
 	public QWidget
 {
