@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MedicalVisualizationClass</class>
+ <widget class="QMainWindow" name="MedicalVisualizationClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>868</width>
+    <height>598</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MedicalVisualization</string>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>868</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFix">
+    <property name="title">
+     <string>Fix</string>
+    </property>
+    <addaction name="actionFile_holes"/>
+    <addaction name="actionReconstruction"/>
+    <addaction name="actionremove_discrete_triangles"/>
+   </widget>
+   <widget class="QMenu" name="menuPoints">
+    <property name="title">
+     <string>Points</string>
+    </property>
+    <addaction name="actionSearchNPoints"/>
+    <addaction name="actionShowleafNodes"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew_Project"/>
+    <addaction name="actionOpen_Project"/>
+    <addaction name="actionSave_Project"/>
+    <addaction name="actionImport"/>
+    <addaction name="actionExport"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuFix"/>
+   <addaction name="menuPoints"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionFile_holes">
+   <property name="text">
+    <string>File holes</string>
+   </property>
+  </action>
+  <action name="actionReconstruction">
+   <property name="text">
+    <string>Reconstruction</string>
+   </property>
+  </action>
+  <action name="actionShowHoles">
+   <property name="text">
+    <string>ShowHolesModel</string>
+   </property>
+  </action>
+  <action name="actionSearchNPoints">
+   <property name="text">
+    <string>SearchNPoints</string>
+   </property>
+  </action>
+  <action name="actionShowleafNodes">
+   <property name="text">
+    <string>ShowleafNodes</string>
+   </property>
+  </action>
+  <action name="actionNew_Project">
+   <property name="text">
+    <string>New Project</string>
+   </property>
+  </action>
+  <action name="actionOpen_Project">
+   <property name="text">
+    <string>Open Project</string>
+   </property>
+  </action>
+  <action name="actionSave_Project">
+   <property name="text">
+    <string>Save Project</string>
+   </property>
+  </action>
+  <action name="actionExport">
+   <property name="text">
+    <string>Export</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionImport">
+   <property name="text">
+    <string>Import</string>
+   </property>
+  </action>
+  <action name="actionremove_discrete_triangles">
+   <property name="text">
+    <string>remove discrete triangles</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MedicalVisualization.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionFile_holes</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MedicalVisualizationClass</receiver>
+   <slot>FillHoles()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>334</x>
+     <y>229</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionReconstruction</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MedicalVisualizationClass</receiver>
+   <slot>Reconstruction()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>334</x>
+     <y>229</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionShowHoles</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MedicalVisualizationClass</receiver>
+   <slot>ShowHoles()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>434</x>
+     <y>298</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionShowleafNodes</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MedicalVisualizationClass</receiver>
+   <slot>DrawLeafNodes()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>434</x>
+     <y>298</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionImport</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MedicalVisualizationClass</receiver>
+   <slot>ReadFile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>434</x>
+     <y>298</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionExport</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MedicalVisualizationClass</receiver>
+   <slot>SaveFile()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>433</x>
+     <y>298</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSearchNPoints</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MedicalVisualizationClass</receiver>
+   <slot>OnActionSearchNearPoints()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>433</x>
+     <y>298</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionremove_discrete_triangles</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>MedicalVisualizationClass</receiver>
+   <slot>RemoveDiscreteTriangles()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>433</x>
+     <y>298</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>FillHoles()</slot>
+  <slot>Reconstruction()</slot>
+  <slot>ShowHoles()</slot>
+  <slot>DrawLeafNodes()</slot>
+  <slot>ReadFile()</slot>
+  <slot>SaveFile()</slot>
+  <slot>OnActionSearchNearPoints()</slot>
+  <slot>RemoveDiscreteTriangles()</slot>
+ </slots>
+</ui>
